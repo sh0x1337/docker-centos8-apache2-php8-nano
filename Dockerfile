@@ -24,10 +24,9 @@ RUN yum -y install git
 # php && httpd
 RUN yum -y install mod_php php-opcache php-cli php-common php-gd php-intl php-mbstring php-mcrypt php-mysql php-pdo php-pear php-soap php-xml php-xmlrpc php-zip httpd
 
-# pagespeed
-RUN curl -O https://dl-ssl.google.com/dl/linux/direct/mod-pagespeed-stable_current_x86_64.rpm
-RUN dnf -y install at
-RUN rpm -U mod-pagespeed-stable_current_x86_64.rpm
+RUN yum -y install inkscape
+
+# composer
 RUN yum clean all
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
  && php composer-setup.php --install-dir=bin --filename=composer \

@@ -1,5 +1,5 @@
 # docker-centos8-apache-php8-nano
-Docker Container with CentOS 8 running Apache2, PHP8.0, crond, composer, pagespeed and nano
+Docker Container with CentOS 8 running Apache2, PHP8.0, crond, composer and nano
 First Test
 # Pull
 
