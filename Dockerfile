@@ -10,16 +10,19 @@ RUN yum -y install https://rpms.remirepo.net/enterprise/remi-release-8.rpm
 # normal updates
 RUN yum -y update
 
-# enable php 7.4
+# enable php 8.0
 RUN dnf -y install dnf-utils
-RUN dnf -y module install php:remi-7.4
+RUN dnf -y module install php:remi-8.0
 RUN dnf update
 
 # nano
 RUN yum -y install nano
 
+# git
+RUN yum -y install git
+
 # php && httpd
-RUN yum -y install mod_php php-opcache php-cli php-common php-gd php-intl php-mbstring php-mcrypt php-mysql php-pdo php-pear php-soap php-xml php-xmlrpc httpd
+RUN yum -y install mod_php php-opcache php-cli php-common php-gd php-intl php-mbstring php-mcrypt php-mysql php-pdo php-pear php-soap php-xml php-xmlrpc php-zip httpd
 
 # pagespeed
 RUN curl -O https://dl-ssl.google.com/dl/linux/direct/mod-pagespeed-stable_current_x86_64.rpm
